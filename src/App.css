@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+
+.text-style {
+  font-family: "Dancing Script", cursive !important;
+}
+
+.ticket {
+  position: relative;
+  box-sizing: border-box;
+
+  background: rgba(210, 254, 76, 1);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    height: 6px;
+    width: 100%;
+  }
+
+  &:before {
+    top: -5px;
+    background: radial-gradient(
+        circle,
+        transparent,
+        transparent 50%,
+        rgba(210, 254, 76, 1) 50%,
+        rgba(210, 254, 76, 1) 100%
+      ) -7px -8px / 16px 16px repeat-x;
+  }
+
+  &:after {
+    bottom: -5px;
+    background: radial-gradient(
+        circle,
+        transparent,
+        transparent 50%,
+        rgba(210, 254, 76, 1) 50%,
+        rgba(210, 254, 76, 1) 100%
+      ) -7px -2px / 16px 16px repeat-x;
+  }
+}
+
+input[type="checkbox"] {
+  width: 25px !important;
+  height: 25px !important;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1.9px solid #1b3b15;
+  box-shadow: none;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 1em;
+  background: transparent;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked:after {
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  content: "✔";
+  color: white;
+}
+
+.ticket_bg {
+  background-image: url("/ticket_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.9);
+}

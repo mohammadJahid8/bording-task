@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FilterCategory from "./FilterCategory";
 import { lotteryData } from "../utils/data";
+import Ticket from "./Ticket";
 
 const LotteryContainer = () => {
   const [activeButton, setActiveButton] = useState({ id: "3", value: "Forny" });
@@ -29,6 +30,16 @@ const LotteryContainer = () => {
         <p className="text-start text-sm py-2 text-[#1b3b15]">
           {fitleredData.subtitle}
         </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 mt-4">
+          {fitleredData.tickets.map((ticket, index) => (
+            <Ticket key={index} ticket={ticket} />
+          ))}
+        </div>
+
+        <button className="outline-none rounded-[3px]  text-white text-sm bg-[#497617] px-14 mt-8 py-2 font-medium shadow-sm">
+          Tilfof kurven
+        </button>
       </div>
     </div>
   );

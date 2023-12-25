@@ -1,105 +1,62 @@
 export const lotteryData = [
   {
     category: "Forny",
-    title: "Forny dine lodsedler",
-    subtitle: "Vaelg de numre, du gerne vil forny og laed dem i indkobskurven",
-    tickets: [
-      {
-        name: "Forny lodsedler",
-        number: "017.231",
-      },
-      {
-        name: "Forny lodsedler",
-        number: "201.648",
-      },
-      {
-        name: "Forny lodsedler",
-        number: "140.923",
-      },
-    ],
+    title: "Forny dine Lodsedser",
+    subtitle: "Vælg de numre, du gerne vil forny, og læg dem i indkøbskurven",
+    tickets: Array.from({ length: 3 }, (_, index) => ({
+      name: `Forny lodseddel ${index + 1}`,
+      number: `${String(Math.floor(Math.random() * 1000)).padStart(
+        3,
+        "0"
+      )}.${String(Math.floor(Math.random() * 1000)).padStart(3, "0")}`,
+    })),
   },
   {
     category: "Mine Lodsedser",
     title: "Mine Lodsedser",
-    subtitle: "My lottery tickets",
-    tickets: [
-      {
-        name: "My tickets 1",
-        number: "017.231",
-      },
-      {
-        name: "My tickets 1",
-        number: "201.648",
-      },
-      {
-        name: "My tickets 1",
-        number: "140.923",
-      },
-      {
-        name: "My tickets 1",
-        number: "160.923",
-      },
-    ],
+    subtitle: "Vælg dine heldige tal",
+    tickets: Array.from({ length: 4 }, (_, index) => ({
+      name: `Lodseddel ${index + 1}`,
+      number: `${String(Math.floor(Math.random() * 1000)).padStart(
+        3,
+        "0"
+      )}.${String(Math.floor(Math.random() * 1000)).padStart(3, "0")}`,
+    })),
   },
   {
     category: "Gevinster",
     title: "Gevinster",
-    subtitle: "My winnings",
-    tickets: [
-      {
-        name: "My winnings 1",
-        number: "017.231",
-      },
-      {
-        name: "My winnings 1",
-        number: "201.648",
-      },
-      {
-        name: "My winnings 1",
-        number: "140.923",
-      },
-      {
-        name: "My winnings 1",
-        number: "160.923",
-      },
-    ],
+    subtitle: "Se dine vundne gevinster",
+    tickets: Array.from({ length: 4 }, (_, index) => ({
+      name: `Gevinstlods ${index + 1}`,
+      number: `${String(Math.floor(Math.random() * 1000)).padStart(
+        3,
+        "0"
+      )}.${String(Math.floor(Math.random() * 1000)).padStart(3, "0")}`,
+    })),
   },
   {
     category: "Klub Varelotteriet",
     title: "Klub Varelotteriet",
-    subtitle: "Klub Varelotteriet",
-    tickets: [
-      {
-        name: "Klub Varelotteriet 1",
-        number: "017.231",
-      },
-      {
-        name: "Klub Varelotteriet 1",
-        number: "201.648",
-      },
-      {
-        name: "Klub Varelotteriet 1",
-        number: "140.923",
-      },
-    ],
+    subtitle: "Støt din klub og vind",
+    tickets: Array.from({ length: 3 }, (_, index) => ({
+      name: `Klublods ${index + 1}`,
+      number: `${String(Math.floor(Math.random() * 1000)).padStart(
+        3,
+        "0"
+      )}.${String(Math.floor(Math.random() * 1000)).padStart(3, "0")}`,
+    })),
   },
   {
     category: "Mine oplysninger",
     title: "Mine oplysninger",
-    subtitle: "Mine oplysninger",
-    tickets: [
-      {
-        name: "Mine oplysninger 1",
-        number: "017.231",
-      },
-      {
-        name: "Mine oplysninger 1",
-        number: "201.648",
-      },
-      {
-        name: "Mine oplysninger 1",
-        number: "140.923",
-      },
-    ],
+    subtitle: "Se og rediger dine oplysninger",
+    tickets: Array.from({ length: 3 }, (_, index) => ({
+      name: `Oplysningslods ${index + 1}`,
+      number: `${String(Math.floor(Math.random() * 1000)).padStart(
+        3,
+        "0"
+      )}.${String(Math.floor(Math.random() * 1000)).padStart(3, "0")}`,
+    })),
   },
 ];
