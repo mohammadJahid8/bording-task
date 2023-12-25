@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Button = ({ data, activeButton, setActiveButton }) => {
+const Button = ({ data, activeButton, handleFilterLottery }) => {
   return (
     <div>
       <button
@@ -8,7 +8,7 @@ const Button = ({ data, activeButton, setActiveButton }) => {
             ? "border-[#1b3b15] border-2 bg-white"
             : "bg-[#ebf1e2]"
         }  text-[#1b3b15]  `}
-        onClick={() => setActiveButton(data)}
+        onClick={() => handleFilterLottery(data)}
       >
         {data.value}
       </button>

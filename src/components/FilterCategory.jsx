@@ -1,8 +1,7 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import Button from "./Button";
 
-const FilterCategory = () => {
-  const [activeButton, setActiveButton] = useState({ id: "3", value: "Forny" });
+const FilterCategory = ({ activeButton, handleFilterLottery }) => {
   const filterButtons = [
     { id: "1", value: "Mine Lodsedser" },
     { id: "2", value: "Gevinster" },
@@ -17,7 +16,7 @@ const FilterCategory = () => {
         <Button
           key={data.id}
           data={data}
-          setActiveButton={setActiveButton}
+          handleFilterLottery={handleFilterLottery}
           activeButton={activeButton}
         />
       ))}
