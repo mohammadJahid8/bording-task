@@ -1,4 +1,5 @@
 import "./App.css";
+import FilterCategory from "./components/FilterCategory";
 
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       <h1 className="text-center text-4xl italic font-black text-[#1b3b15]">
         Velkommen Mohammad Jahid
       </h1>
+
+      <FilterCategory />
     </div>
   );
 }
